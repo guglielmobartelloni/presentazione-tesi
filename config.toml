@@ -1,7 +1,9 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Presentazione Tesi'
 theme = ["github.com/dzello/reveal-hugo"]
+relativeURLs = true
+uglyURLs = true
 
 [markup.goldmark.renderer]
 unsafe = true
