@@ -4,8 +4,8 @@
   <url>
     <loc>http://example.org/categories.html</loc>
   </url><url>
-    <loc>http://example.org/</loc>
-  </url><url>
     <loc>http://example.org/tags.html</loc>
+  </url><url>
+    <loc>http://example.org/</loc>
   </url>
 </urlset>
