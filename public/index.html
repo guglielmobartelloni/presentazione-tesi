@@ -69,6 +69,12 @@
 </span>
 
 
+
+
+<span class='fragment ' ><p>I modelli di Machine Learning sono sensibili ai dati di addestramento.</p>
+</span>
+
+
 </section><section>
 <h2 id="dataset-di-un-ids">Dataset di un IDS</h2>
 
@@ -96,13 +102,6 @@
 </section><section>
 
 
-<span class='fragment ' ><p><strong>Generare</strong> nuovi dati a partire da quelli già esistenti per migliorare i modelli di Machine Learning</p>
-</span>
-
-
-</section><section>
-
-
 <span class='fragment ' ><h2 id="scopo-della-tesi">Scopo della tesi</h2>
 </span>
 
@@ -120,8 +119,261 @@
 
 
 </section><section>
-<h2 id="soft-brownian-offset">Soft-Brownian-Offset</h2>
-<p>Algoritmo di generazione di dati</p>
+<h2 id="soft-brownian-offset">Soft Brownian Offset</h2>
+
+
+<span class='fragment ' ><p>Algoritmo di generazione di dati creato inizialmente per la generazione di eventi anomali.</p>
+</span>
+
+
+</section><section>
+<h2 id="dataset-utilizzati">Dataset utilizzati</h2>
+
+
+<span class='fragment ' ><ul>
+<li>Adfanet</li>
+</ul>
+</span>
+
+
+<br/>
+
+
+<span class='fragment ' ><ul>
+<li>CICIDS</li>
+</ul>
+</span>
+
+
+</section><section>
+<h3 id="approcci-di-generazione">Approcci di Generazione</h3>
+<p>Generazione a partire dalla tipologia di dati:</p>
+
+
+<span class='fragment ' ><ul>
+<li>Solo pacchetti normali</li>
+</ul>
+</span>
+
+
+<br/>
+
+
+<span class='fragment ' ><ul>
+<li>Solo pacchetti attacchi</li>
+</ul>
+</span>
+
+
+<br/>
+
+
+<span class='fragment ' ><ul>
+<li>Dataset completo</li>
+</ul>
+</span>
+
+
+</section><section>
+<h2 id="grafici">Grafici</h2>
+<p>Per una valutazione qualitativa degli approcci di generazione.</p>
+</section><section>
+<h2 id="generazione">Generazione</h2>
+<h3 id="a-partire-da-pacchetti-normali">A partire da pacchetti normali</h3>
+<p><img src="cicids_normal.png" alt=""></p>
+<img src="legenda.png" style="height: 100px"/>
+</section><section>
+<h2 id="generazione-1">Generazione</h2>
+<h3 id="a-partire-da-pacchetti-di-attacchi">A partire da pacchetti di attacchi</h3>
+<p><img src="cicids_attack.png" alt=""></p>
+<img src="legenda.png" style="height: 100px"/>
+</section><section>
+<h3 id="approcci-di-addestramento-del-modello">Approcci di Addestramento del modello</h3>
+<p>Addestramento usando:</p>
+
+
+<span class='fragment ' ><ul>
+<li>Dataset completo + Dati sintetici</li>
+</ul>
+</span>
+
+
+<br/>
+
+
+<span class='fragment ' ><ul>
+<li>Solo pacchetti normali + Dati sintetici</li>
+</ul>
+</span>
+
+
+<br/>
+
+
+<span class='fragment ' ><ul>
+<li>Solo dataset (senza dati generati)</li>
+</ul>
+</span>
+
+
+</section><section>
+<h3 id="adfanet">Adfanet</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Pacchetti normali + Gen</th>
+<th>Dataset Completo + Gen</th>
+<th>Solo Dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gen Normali</td>
+<td>0.3337</td>
+<td>0.99839</td>
+<td>0.93596</td>
+</tr>
+<tr>
+<td>Gen Attacchi</td>
+<td>0.4404</td>
+<td>0.99865</td>
+<td>0.93596</td>
+</tr>
+<tr>
+<td>Gen Completo</td>
+<td>0.3452</td>
+<td>0.99854</td>
+<td>0.93596</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="none">
+  
+<h3 id="adfanet-1">Adfanet</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Pacchetti normali + Gen</th>
+<th>Dataset Completo + Gen</th>
+<th>Solo Dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gen Normali</td>
+<td>0.3337</td>
+<td>0.99839</td>
+<td>0.93596</td>
+</tr>
+<tr>
+<td>Gen Attacchi</td>
+<td>0.4404</td>
+<td><strong>0.99865</strong></td>
+<td>0.93596</td>
+</tr>
+<tr>
+<td>Gen Completo</td>
+<td>0.3452</td>
+<td>0.99854</td>
+<td>0.93596</td>
+</tr>
+</tbody>
+</table>
+</section><section>
+<h3 id="cicids">CICIDS</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Pacchetti normali + Gen</th>
+<th>Dataset Completo + Gen</th>
+<th>Solo Dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gen Normali</td>
+<td>-0.1153</td>
+<td>0.92772</td>
+<td>0.93596</td>
+</tr>
+<tr>
+<td>Gen Attacchi</td>
+<td>-0.1366</td>
+<td>0.93428</td>
+<td>0.93596</td>
+</tr>
+<tr>
+<td>Gen Completo</td>
+<td>-0.1206</td>
+<td>0.92493</td>
+<td>0.93596</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section data-noprocess data-shortcode-slide
+      data-transition="none">
+  
+<h3 id="cicids-1">CICIDS</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Pacchetti normali + Gen</th>
+<th>Dataset Completo + Gen</th>
+<th>Solo Dataset</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gen Normali</td>
+<td>-0.1153</td>
+<td>0.92772</td>
+<td><strong>0.93596</strong></td>
+</tr>
+<tr>
+<td>Gen Attacchi</td>
+<td>-0.1366</td>
+<td>0.93428</td>
+<td><strong>0.93596</strong></td>
+</tr>
+<tr>
+<td>Gen Completo</td>
+<td>-0.1206</td>
+<td>0.92493</td>
+<td><strong>0.93596</strong></td>
+</tr>
+</tbody>
+</table>
+</section><section>
+<h3 id="conclusioni">Conclusioni</h3>
+<p>
+
+<span class='fragment ' ><p>Soft Brownian Offset è efficace nel caso di dataset <strong>semplici</strong>.</p>
+</span>
+
+
+
+
+<span class='fragment ' ><p>In dataset <strong>complessi</strong> invece l&rsquo;algoritmo non presenta miglioramenti.</p>
+</span>
+
+</p>
+
+
+<span class='fragment ' ><p>In quest&rsquo;ultimo caso è necessario rivolgersi ad algoritmi differenti.</p>
+</span>
+
+
+</section><section>
+<h3 id="grazie-per-lattenzione">Grazie per l&rsquo;attenzione</h3>
 </section>
 
   
