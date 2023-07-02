@@ -39,10 +39,6 @@ La branca dell'**Intelligenza Artificiale** che sviluppa modelli per permettere 
 ---
 
 {{% fragment %}} 
-### Problema
-{{% /fragment %}}
-
-{{% fragment %}} 
 I modelli di Machine Learning sono sensibili ai dati di addestramento.
 {{% /fragment %}}
 
@@ -56,7 +52,7 @@ I modelli di Machine Learning sono sensibili ai dati di addestramento.
 
 ---
 
-## Una soluzione
+## Possibile metodo miglioramento
 
 {{% fragment %}} 
 **Generare** nuovi dati a partire da quelli già esistenti per migliorare i modelli di Machine Learning
