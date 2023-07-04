@@ -28,6 +28,7 @@
   
 
     <section><h1 style="text-transform: inherit; font-size: 2em">Utilizzo di Soft-Brownian-Offset per la generazione di attacchi ai fini dell’addestramento di rilevatori di intrusioni</h1>
+<h2 style="text-transform: inherit; font-size: 1em">Guglielmo Bartelloni <br/> Relatore: Andrea Ceccarelli</h2>
 </section><section>
 <p>
 
@@ -65,7 +66,17 @@
 </section><section>
 
 
-<span class='fragment ' ><p>I modelli di Machine Learning sono sensibili ai dati di addestramento.</p>
+<span class='fragment ' ><ul>
+<li>I modelli di Machine Learning sono sensibili ai dati di addestramento.</li>
+</ul>
+</span>
+
+
+
+
+<span class='fragment ' ><ul>
+<li>I dataset non contengono tutti i possibili attacchi in una rete</li>
+</ul>
 </span>
 
 
@@ -113,7 +124,7 @@
 
 
 </section><section>
-<h2 id="soft-brownian-offset">Soft Brownian Offset</h2>
+<h2 id="soft-brownian-offset-2021">Soft Brownian Offset (2021)</h2>
 
 
 <span class='fragment ' ><p>Algoritmo di generazione di dati creato inizialmente per la generazione di eventi anomali.</p>
@@ -134,7 +145,7 @@
 
 
 <span class='fragment ' ><ul>
-<li>CICIDS</li>
+<li>CICIDS18</li>
 </ul>
 </span>
 
@@ -183,7 +194,7 @@
 <img src="legenda.png" style="height: 100px"/>
 </section><section>
 <h3 id="approcci-di-addestramento-del-modello">Approcci di Addestramento del modello</h3>
-<p>Addestramento usando:</p>
+<p>Addestramento di XGBoost usando:</p>
 
 
 <span class='fragment ' ><ul>
@@ -211,7 +222,7 @@
 
 
 </section><section>
-<h3 id="adfanet">Adfanet</h3>
+<h3 id="adfanet-mcc">Adfanet (MCC)</h3>
 <table>
 <thead>
 <tr>
@@ -226,19 +237,19 @@
 <td>Gen Normali</td>
 <td>0.3337</td>
 <td>0.99839</td>
-<td>0.93596</td>
+<td>0.99842</td>
 </tr>
 <tr>
 <td>Gen Attacchi</td>
 <td>0.4404</td>
 <td>0.99865</td>
-<td>0.93596</td>
+<td>0.99842</td>
 </tr>
 <tr>
 <td>Gen Completo</td>
 <td>0.3452</td>
 <td>0.99854</td>
-<td>0.93596</td>
+<td>0.99842</td>
 </tr>
 </tbody>
 </table>
@@ -247,7 +258,7 @@
 <section data-noprocess data-shortcode-slide
       data-transition="none">
   
-<h3 id="adfanet-1">Adfanet</h3>
+<h3 id="adfanet-mcc-1">Adfanet (MCC)</h3>
 <table>
 <thead>
 <tr>
@@ -262,24 +273,24 @@
 <td>Gen Normali</td>
 <td>0.3337</td>
 <td>0.99839</td>
-<td>0.93596</td>
+<td>0.99842</td>
 </tr>
 <tr>
 <td>Gen Attacchi</td>
 <td>0.4404</td>
 <td><strong>0.99865</strong></td>
-<td>0.93596</td>
+<td>0.99842</td>
 </tr>
 <tr>
 <td>Gen Completo</td>
 <td>0.3452</td>
 <td>0.99854</td>
-<td>0.93596</td>
+<td>0.99842</td>
 </tr>
 </tbody>
 </table>
 </section><section>
-<h3 id="cicids">CICIDS</h3>
+<h3 id="cicids-mcc">CICIDS (MCC)</h3>
 <table>
 <thead>
 <tr>
@@ -315,7 +326,7 @@
 <section data-noprocess data-shortcode-slide
       data-transition="none">
   
-<h3 id="cicids-1">CICIDS</h3>
+<h3 id="cicids-mcc-1">CICIDS (MCC)</h3>
 <table>
 <thead>
 <tr>
