@@ -90,6 +90,10 @@ Cercare di migliorare un IDS utilizzando Soft-Brownian-Offset
 Algoritmo di generazione di dati creato inizialmente per la generazione di eventi anomali.
 {{% /fragment %}}
 
+{{% fragment %}}
+![](sbo.png)
+{{% /fragment %}}
+
 ---
 
 ## Dataset utilizzati
