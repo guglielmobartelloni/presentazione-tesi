@@ -9,6 +9,7 @@ margin = 0.2
 +++
 
 <h1 style="text-transform: inherit; font-size: 2em">Utilizzo di Soft-Brownian-Offset per la generazione di attacchi ai fini dell’addestramento di rilevatori di intrusioni</h1>
+<h2 style="text-transform: inherit; font-size: 1em">Guglielmo Bartelloni <br/> Relatore: Andrea Ceccarelli</h2>
 
 
 ---
@@ -39,7 +40,11 @@ La branca dell'**Intelligenza Artificiale** che sviluppa modelli per permettere 
 ---
 
 {{% fragment %}} 
-I modelli di Machine Learning sono sensibili ai dati di addestramento.
+- I modelli di Machine Learning sono sensibili ai dati di addestramento.
+{{% /fragment %}}
+
+{{% fragment %}} 
+- I dataset non contengono tutti i possibili attacchi in una rete
 {{% /fragment %}}
 
 ---
@@ -79,7 +84,7 @@ Cercare di migliorare un IDS utilizzando Soft-Brownian-Offset
 
 ---
 
-## Soft Brownian Offset
+## Soft Brownian Offset (2021)
 
 {{% fragment %}}
 Algoritmo di generazione di dati creato inizialmente per la generazione di eventi anomali.
@@ -96,7 +101,7 @@ Algoritmo di generazione di dati creato inizialmente per la generazione di event
 <br/>
 
 {{% fragment %}}
-- CICIDS
+- CICIDS18
 {{% /fragment %}}
 
 ---
@@ -150,7 +155,7 @@ Per una valutazione qualitativa degli approcci di generazione.
 
 ### Approcci di Addestramento del modello
 
-Addestramento usando:
+Addestramento di XGBoost usando:
 
 {{% fragment %}}
 - Dataset completo + Dati sintetici
@@ -170,29 +175,29 @@ Addestramento usando:
 
 ---
 
-### Adfanet
+### Adfanet (MCC)
 
 |  | Pacchetti normali + Gen      | Dataset Completo + Gen | Solo Dataset |
 | ----------- | ----------- | ----------- | ----------- |
-| Gen Normali     | 0.3337       | 0.99839 | 0.93596 |
-| Gen Attacchi     | 0.4404       | 0.99865 | 0.93596 |
-| Gen Completo     | 0.3452       | 0.99854| 0.93596 |
+| Gen Normali     | 0.3337       | 0.99839 | 0.99842 |
+| Gen Attacchi     | 0.4404       | 0.99865 | 0.99842 |
+| Gen Completo     | 0.3452       | 0.99854| 0.99842 |
 
 ---
 
 {{< slide transition="none">}}
 
-### Adfanet
+### Adfanet (MCC)
 
 |  | Pacchetti normali + Gen      | Dataset Completo + Gen | Solo Dataset |
 | ----------- | ----------- | ----------- | ----------- |
-| Gen Normali     | 0.3337       | 0.99839 | 0.93596 |
-| Gen Attacchi     | 0.4404       | **0.99865** | 0.93596 |
-| Gen Completo     | 0.3452       | 0.99854| 0.93596 |
+| Gen Normali     | 0.3337       | 0.99839 | 0.99842 |
+| Gen Attacchi     | 0.4404       | **0.99865** | 0.99842 |
+| Gen Completo     | 0.3452       | 0.99854| 0.99842 |
 
 ---
 
-### CICIDS
+### CICIDS (MCC)
 
 |  | Pacchetti normali + Gen      | Dataset Completo + Gen | Solo Dataset |
 | ----------- | ----------- | ----------- | ----------- |
@@ -204,7 +209,7 @@ Addestramento usando:
 
 {{< slide transition="none">}}
 
-### CICIDS
+### CICIDS (MCC)
 
 |  | Pacchetti normali + Gen      | Dataset Completo + Gen | Solo Dataset |
 | ----------- | ----------- | ----------- | ----------- |
